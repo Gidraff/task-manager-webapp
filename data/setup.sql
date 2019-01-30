@@ -5,6 +5,7 @@ drop table sessions;
 
 create table users (
   id serial primary key,
+  uuid       varchar(64) not null unique,
   name varchar(255),
   email varchar(255) not null unique,
   password varchar(255) not null,
@@ -21,6 +22,7 @@ create table sessions (
 
 create table tasks (
   id serial primary key,
+  uuid       varchar(64) not null unique,
   task_name varchar(255) not null unique,
   user_id integer references users(id),
   created_at timestamp not null
@@ -28,6 +30,7 @@ create table tasks (
 
 create table notes (
   id serial primary key,
+  uuid       varchar(64) not null unique,
   note_description varchar(255) not null unique,
   task_id integer references tasks(id),
   created_at timestamp not null

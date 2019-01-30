@@ -1,12 +1,18 @@
 {{ define "content" }}
-  <form class="form-signin center" role="form" action="/authenticate" method="post">
+  <form class="signup-form" role="form" action="/authenticate" method="post">
     <h2 class="form-signin-heading">
       <i class="fa fa-comments-o">
         Task Manager
       </i>
     </h2>
-    <input type="email" name="email" placeholder="Email address" required autofocus>
-    <input type="password" name="password" placeholder="Password" required>
+    <div class="">
+      <label for="">Email</label>
+      <input type="email" name="email" required autofocus>
+    </div>
+    <div class="">
+      <label for="">Password</label>
+      <input type="password" name="password" required>
+    </div>
     <br/>
     <button type="submit">Sign in</button>
     <br/>
