@@ -1,1 +1,12 @@
+body {
+  width: 100%;
+  /* background-color: yellow; */
+}
 
+.signup-form {
+  margin: 3em auto;
+  /* background-color: red; */
+  text-align: center;
+  /* display: inline-block; */
+  padding: 10em;
+}

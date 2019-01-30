@@ -85,7 +85,7 @@ func SessionDeleteAll() (err error) {
 
 // Create a new user
 func (user *User) Create() (err error) {
-	statement := "INSERT INTO users (uuid, name, email, password, created_at) VALUE ($1, $2, $3, $4, $5) RETURNING id, uuid, created_at"
+	statement := "INSERT INTO users (uuid, name, email, password, created_at) VALUES ($1, $2, $3, $4, $5) RETURNING id, uuid, created_at"
 	stmt, err := Db.Prepare(statement)
 	if err != nil {
 		return
