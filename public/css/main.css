@@ -1,7 +1,8 @@
 body {
-  width: 100%;
-  /* background-color: yellow; */
+  padding: 0;
+  margin: 0;
 }
+
 
 .signup-form {
   margin: 3em auto;
@@ -9,4 +10,42 @@ body {
   text-align: center;
   /* display: inline-block; */
   padding: 10em;
+}
+
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #DDE2E3;
+}
+
+.navigation-bar ul {
+  text-align: right;
+}
+
+.navigation-bar ul li {
+  display: inline-block;
+  clear: left;
+  padding: 1em;
+}
+
+.navigation-bar ul li {
+  background-color: #DDE2E3;
+}
+
+.navigation-bar ul li a {
+  text-decoration: none;
+}
+
+.navigation-bar ul li a:hover {
+  color: #0000FF;
+}
+
+
+.main-content {
+  width: 50%;
+}
+
+form input {
+  margin: 0.8em;
 }

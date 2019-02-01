@@ -1,0 +1,14 @@
+ERROR 2019/02/01 07:53:00 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 07:53:19 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 07:55:31 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 08:01:16 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 08:03:17 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 08:03:47 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 08:05:13 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 08:05:48 utils.go:99: sql: no rows in result set Cannot find user with that email
+ERROR 2019/02/01 08:10:05 utils.go:99: sql: no rows in result set Cannot find user
+ERROR 2019/02/01 08:10:20 utils.go:99: sql: no rows in result set Cannot find user
+ERROR 2019/02/01 08:10:36 utils.go:99: sql: no rows in result set Cannot find user
+ERROR 2019/02/01 08:10:57 utils.go:99: pq: syntax error at or near "value" Cannot create session
+ERROR 2019/02/01 10:32:42 utils.go:99: pq: syntax error at or near "value" Cannot create session
+ERROR 2019/02/01 17:41:04 utils.go:99: pq: syntax error at or near "value" Cannot create session

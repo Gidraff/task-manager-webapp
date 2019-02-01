@@ -7,7 +7,7 @@ BINARY_NAME=app
 BINARY_UNIX=$(BINARY_NAME)_unix
 
 all: build run
-		@echo "Starting application server..."
+		@echo "Starting app" | figlet
 
 get-deps:
 				go get github.com/julienschmidt/httprouter

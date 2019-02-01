@@ -1,16 +1,22 @@
 {{ define "content" }}
 
 <form class="signup-form" role="form" action="/signup_account" method="post">
-  <h2 class="">
-    <i class="fa fa-comments-o">
-      Task Manager
-    </i>
-  </h2>
-  <div >Sign up for an account below</div>
-  <input id="name" type="text" name="name" placeholder="Name" required autofocus>
-  <input type="email" name="email" placeholder="Email address" required>
-  <input type="password" name="password" placeholder="Password" required>
-  <button type="submit">Sign up</button>
+  <div >Creat account</div>
+  <div class="">
+    <input id="name" type="text" name="name" placeholder="Name" required autofocus>
+  </div>
+  <div class="">
+    <input type="email" name="email" placeholder="Email address" required>
+  </div>
+  <div class="">
+    <input type="password" name="password" placeholder="Password" required>
+  </div>
+  <div class="">
+    <input type="password" name="confirm" placeholder="Confirm" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign up</button>
+  <br/>
+  <a href="/login">login</a>
 </form>
 
 {{ end }}
