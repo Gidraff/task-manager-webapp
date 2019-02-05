@@ -1,3 +1,0 @@
-ERROR 2019/02/05 20:38:18 utils.go:99: pq: column "task_id" does not exist Cannot fetch tasks
-ERROR 2019/02/05 20:38:27 utils.go:99: sql: expected 5 destination arguments in Scan, not 3 Cannot create task
-ERROR 2019/02/05 20:38:27 utils.go:99: pq: column "task_id" does not exist Cannot fetch tasks
