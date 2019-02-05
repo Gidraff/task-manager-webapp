@@ -1,3 +1,6 @@
 {{ define "content" }}
   <h4>You have no Tasks yet</h4>
+  {{ range . }}
+    <li>{{ . }}</li>
+  {{ end }}
 {{ end }}
