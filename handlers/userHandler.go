@@ -59,7 +59,7 @@ func Authenticate(writer http.ResponseWriter, request *http.Request) {
 		}
 		// set cookie
 		http.SetCookie(writer, &cookie)
-		http.Redirect(writer, request, "/", 302)
+		http.Redirect(writer, request, "/task", 302)
 	} else {
 		http.Redirect(writer, request, "/login", 302)
 	}

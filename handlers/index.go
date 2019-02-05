@@ -10,6 +10,6 @@ import (
 
 // Index page
 func Index(w http.ResponseWriter, r *http.Request) {
-	t := utils.ParseTemplateFiles("layout", "public.navbar", "index")
+	t := utils.ParseTemplateFiles("unauthenticated.layout", "index", "public.navbar")
 	t.Execute(w, nil)
 }
