@@ -26,6 +26,24 @@ func NewTask(writer http.ResponseWriter, request *http.Request) {
 	t.Execute(writer, nil)
 }
 
+//
+func ReadTask(writer http.ResponseWriter, request *http.Request) {
+	sess, err := utils.Session(writer, request)
+	if err != nil {
+		http.Redirect(writer, request, "/login", 302)
+	} else {
+		user, err := sess.User()
+		if err != nil {
+			utils.Danger(err, "Cannot get user from session")
+		}
+		tasks, err := user.Tasks()
+		if err != nil {
+			utils.Danger(err, "Cannot fetch tasks")
+		}
+		utils.GenerateHTML(writer, &tasks, "layout", "dashboard", "side.navbar", "private.navbar")
+	}
+}
+
 // CreateTask creates
 func CreateTask(writer http.ResponseWriter, request *http.Request) {
 	sess, err := utils.Session(writer, request)

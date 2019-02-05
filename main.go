@@ -19,7 +19,7 @@ func main() {
 	mux.HandleFunc("/signup", handlers.Signup)
 	mux.HandleFunc("/signup_account", handlers.SignUpAccount)
 	mux.HandleFunc("/authenticate", handlers.Authenticate)
-	mux.HandleFunc("/task", handlers.Dashboard)
+	mux.HandleFunc("/task", handlers.ReadTask)
 	mux.HandleFunc("/task/new", handlers.NewTask)
 	mux.HandleFunc("/create_task", handlers.CreateTask)
 

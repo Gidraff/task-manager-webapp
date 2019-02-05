@@ -32,3 +32,20 @@ func (user *User) CreateTask(taskName string) (conv Task, err error) {
 		Scan(&conv.Id, &conv.Uuid, &conv.CreatedAt)
 	return
 }
+
+// Tasks fetch all tasks
+func (user *User) Tasks() (tasks []Task, err error) {
+	rows, err := Db.Query("SELECT uuid, user_id, task_name, task_id, created_at FROM tasks WHERE user_id = $1", user.Id)
+	if err != nil {
+		return
+	}
+	for rows.Next() {
+		task := Task{}
+		if err = rows.Scan(&task.Uuid, &task.UserId, &task.TaskName, &task.Id, &task.CreatedAt); err != nil {
+			return
+		}
+		tasks = append(tasks, task)
+	}
+	rows.Close()
+	return
+}
