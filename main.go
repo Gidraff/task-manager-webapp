@@ -15,10 +15,13 @@ func main() {
 	mux.Handle("/static/", http.StripPrefix("/static", files))
 
 	mux.HandleFunc("/login", handlers.Login)
-	mux.HandleFunc("/index", handlers.Index)
+	mux.HandleFunc("/", handlers.Index)
 	mux.HandleFunc("/signup", handlers.Signup)
 	mux.HandleFunc("/signup_account", handlers.SignUpAccount)
 	mux.HandleFunc("/authenticate", handlers.Authenticate)
+	mux.HandleFunc("/task", handlers.Dashboard)
+	mux.HandleFunc("/task/new", handlers.NewTask)
+	mux.HandleFunc("/create_task", handlers.CreateTask)
 
 	server := &http.Server{
 		Addr:    "127.0.0.1:8080",

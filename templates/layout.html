@@ -9,10 +9,15 @@
     <link href="/static/css/main.css" rel="stylesheet">
   </head>
   <body>
-    {{ template "navbar" . }}
-    <div>
+    <nav class="navigation-bar">
+      {{ template "navbar" . }}
+    </nav>
+    <aside class="column sidebar">
+      {{ template "sidebar" . }}
+    </aside>
+    <section class="column content">
       {{ template "content" . }}
-    </div>
+    </section>
     <!-- <script src="/static/js/jquery-2.1.1.min.js"></script> -->
     <script src="/static/js/bootstrap.min.js"></script>
   </body>

@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
+  max-width: 100%
 }
 
 
@@ -13,7 +18,7 @@ body {
 }
 
 .navigation-bar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: #DDE2E3;
@@ -25,11 +30,8 @@ body {
 
 .navigation-bar ul li {
   display: inline-block;
-  clear: left;
+  /* clear: left; */
   padding: 1em;
-}
-
-.navigation-bar ul li {
   background-color: #DDE2E3;
 }
 
@@ -41,11 +43,55 @@ body {
   color: #0000FF;
 }
 
-
 .main-content {
-  width: 50%;
+  color: white;
+  padding: 3em;
+  position: static;
+  left: 0;
+  height: 800px;
+  background-image: linear-gradient(to right bottom, #051937, #004a65, #1b7e82, #71b292, #cfe1a5);
 }
 
 form input {
   margin: 0.8em;
+}
+
+.sidebar {
+  width: 25%;
+  padding: 2em;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+
+.sidebar ul  li  a {
+  display: block;
+  text-decoration: none;
+  padding: 8px 16px;
+  color: #000;
+}
+
+.sidebar ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+.content {
+  width: 70%;
+  margin: auto;
+  padding: 2em;
+  margin-left: 2em;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix {
+  color: white;
+  text-decoration: none;
 }

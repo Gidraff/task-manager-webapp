@@ -22,7 +22,7 @@ type Session struct {
 
 // CreateSession returns a user session
 func (user *User) CreateSession() (session Session, err error) {
-	statement := "insert into sessions (uuid, email, user_id, created_at) value($1, $2, $3, $4) returning id, uuid, email, user_id, created_at"
+	statement := "INSERT INTO sessions (uuid, email, user_id, created_at) VALUES($1, $2, $3, $4) RETURNING id, uuid, email, user_id, created_at"
 	stmt, err := Db.Prepare(statement)
 	if err != nil {
 		return
@@ -44,7 +44,7 @@ func (user *User) Session() (session Session, err error) {
 // Check user session
 func (session *Session) Check() (valid bool, err error) {
 	err = Db.QueryRow("SELECT id, uuid, email, user_id, created_at FROM sessions WHERE uuid = $1", session.Uuid).
-		Scan(&session.Id, &session.Uuid, &session.UserId, &session.CreatedAt)
+		Scan(&session.Id, &session.Uuid, &session.Email, &session.UserId, &session.CreatedAt)
 	if err != nil {
 		valid = false
 		return
